@@ -4,6 +4,14 @@
 # The least significant bit is at index 7.
 # Calculate  and return the decimal value for this binary number using
 # the algorithm you devised in class.
-def binary_to_decimal(binary_array)
-  raise NotImplementedError
+# def binary_to_decimal(binary_array)
+#  raise NotImplementedError
+# end
+
+def binary_to_decimal(bi_num)
+  sum = 0
+  bi_num.reverse.each_with_index do |bit, i|
+    sum += bit * 2**i
+  end
+  return sum
 end
