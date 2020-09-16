@@ -15,3 +15,5 @@ def binary_to_decimal(bi_num)
   end
   return sum
 end
+
+
