@@ -8,12 +8,23 @@
 #  raise NotImplementedError
 # end
 
+# def binary_to_decimal(bi_num)
+#   sum = 0
+#   bi_num.reverse.each_with_index |bit, i|
+#     sum += bit * 2**i
+#   return sum
+# end
+#
+# num = 00100111
+#
+# p binary_to_decimal(num)
+
 def binary_to_decimal(bi_num)
   sum = 0
-  bi_num.reverse.each_with_index do |bit, i|
-    sum += bit * 2**i
+  count = bi_num.length - 1
+  bi_num.each do |bit|
+    sum += bit * 2**count
+    count -= 1
   end
   return sum
 end
-
-
